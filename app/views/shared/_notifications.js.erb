@@ -1,0 +1,4 @@
+<% if flash[:notice] -%>
+  
+  show_notification(("<%=escape_javascript(render(:partial => "shared/warning", :locals => {:flash => flash})) -%>"));
+<% end -%>

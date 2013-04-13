@@ -1,0 +1,6 @@
+<% unless  @collection.blank? %>
+    <%= "#{t(:list_count)} "-%><span id="counter_number"><%= "#{@collection.total_entries}" %></span>
+    <%= will_paginate @collection %>
+<% else %>
+    <%= "#{t(:list_count)} "-%><span id="counter_number"><%= "0"%></span>
+<% end %>

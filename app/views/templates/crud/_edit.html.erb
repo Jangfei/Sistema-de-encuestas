@@ -1,0 +1,9 @@
+  <%= simple_form_for(@object, :url => object_url(@object), :remote => is_xhr?, :method => :put) do |f| %>
+	<fieldset>
+		<legend><%= t(:edit_record, :record_name => t(object_name.downcase))%></legend>
+	    <%= render :partial => "form", :locals => { :f => f } %>
+	</fieldset>
+		<%= f.button :submit %>
+    	<%= cancel_button_tag(collection_url)%>
+  <% end %>
+

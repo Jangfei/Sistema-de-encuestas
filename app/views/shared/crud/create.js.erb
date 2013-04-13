@@ -1,0 +1,6 @@
+<%= render 'shared/notifications'-%>
+$.fancybox.close();
+$("#<%=list_id-%>").prepend("<%=escape_javascript(render(:partial => "row", :locals => {:row => @object, :hide => true})) -%>");
+$('#<%= dom_id(@object)-%>').fadeIn();
+$('#<%= footer_id %> #counter_number').html(parseInt($('#<%= footer_id %> #counter_number').html())+1);
+$('a[rel=lightbox]').fancybox(fancybox_options);

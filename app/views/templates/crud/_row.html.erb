@@ -1,0 +1,13 @@
+<% item = row if row %>
+<tr id="<%= dom_id(item)%>" style='<%= defined?(hide) ? "display:none" : '' -%>'  >
+	<td> 
+	<%= link_to( image_tag("edit.gif",
+	:border=>0, :alt => t(:edit), :title=>t(:edit)), edit_object_url(item), :rel=>:lightbox)-%>
+	<%= link_to( image_tag("anular.gif",
+	:border=>0, :alt => t(:delete), :title=>t(:delete)), object_url(item), :method => :delete, :confirm => t(:delete_register))-%>
+	
+	
+	</td>
+	<td><%= item.id %></td>
+	<td><%= item.name-%></td>
+</tr>

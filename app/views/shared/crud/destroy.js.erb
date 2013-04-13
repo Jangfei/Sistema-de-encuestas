@@ -1,0 +1,4 @@
+<%= render 'shared/notifications'-%>
+$('#<%= dom_id(@object)-%>').fadeOut(1000);
+$('#<%= footer_id %> #counter_number').html(parseInt($('#<%= footer_id %> #counter_number').html())-1);
+$('#<%= dom_id(@object)-%>').remove();

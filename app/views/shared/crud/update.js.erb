@@ -1,0 +1,7 @@
+<%= render 'shared/notifications'-%>
+$.fancybox.close();
+$('#<%= dom_id(@object)-%>').replaceWith("<%=escape_javascript(render(:partial => "row", :locals => {:row => @object})) -%>", 
+function(){
+	$("#fader").animate({marginTop: "500px"});
+});
+$('a[rel=lightbox]').fancybox(fancybox_options);
