@@ -1,0 +1,15 @@
+<h3><%= link_to t(:preguntas) </h3>
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th> <%= t(:Id) %> </th>
+            <th colspan="2"> <%= t('evaluacion') %> </th>
+        </tr>
+    </thead>
+    <tbody>
+        <%= render :partial => "row", :collection=> @collection %>
+    </tbody>
+</table>
+
