@@ -46,6 +46,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    makandra_resource_controller (0.8.0)
     mime-types (1.21)
     multi_json (1.7.1)
     mysql2 (0.3.11-x86-mingw32)
@@ -107,6 +108,7 @@ DEPENDENCIES
   execjs
   fancybox-rails
   jquery-rails (= 2.2.0)
+  makandra_resource_controller
   mysql2
   pg
   rails (= 3.2.11)
