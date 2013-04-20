@@ -1,4 +1,17 @@
 SistemaEncuestas::Application.routes.draw do
+  
+  match "/", :controller=> "start", :action => 'index'
+  
+    namespace "administrador" do
+      resources :questions
+    end
+
+    namespace "usuario" do
+    end
+
+  match "/:action", :controller=> "start"
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
