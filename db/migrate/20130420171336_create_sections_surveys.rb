@@ -1,6 +1,6 @@
-class CreateSectionSurveys < ActiveRecord::Migration
+class CreateSectionsSurveys < ActiveRecord::Migration
 def change
-    create_table :section_surveys do |t|
+    create_table :sections_surveys do |t|
       t.integer :survey_id
       t.integer :section_id
 

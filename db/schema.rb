@@ -1,3 +1,4 @@
+
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -116,3 +117,4 @@ ActiveRecord::Schema.define(:version => 20130420171602) do
   end
 
 end
+>>>>>>> 91938913bbd0c0701d72ee851a5233d3e866c5ca
