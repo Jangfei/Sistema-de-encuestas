@@ -1,0 +1,53 @@
+
+
+div.print_student{
+    float:left;
+    width: 150px;
+    height: 350px;
+    height: 3.3cm;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 0px;
+    
+}
+
+div.print_student p{
+    text-align: center;
+    padding-bottom: 0px;
+    margin: 0;
+}
+
+div.print_student img{
+    max-height: 200px;
+    max-width: 300px;
+/*    padding-top: 2px;*/
+}
+
+div.image {
+    float: right;
+    padding-bottom: 0px;
+    padding-top: 4px;
+/*    width: 80px;*/
+}
+
+div.image img{
+
+
+    width: 80px;
+
+}
+
+div.a {
+    font-size: 20px;
+    font-family: Arial;
+}
+
+.print{
+    color : #111;
+/*    font-family: fantasy;*/
+    border: 0;
+}
+.no_print{
+    display: none
+}

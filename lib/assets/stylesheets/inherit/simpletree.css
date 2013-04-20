@@ -1,0 +1,96 @@
+.treeview ul{ /*CSS for Simple Tree Menu*/
+margin: 0;
+padding: 0;
+}
+
+.treeview li{ /*Style for LI elements in general (excludes an LI that contains sub lists)*/
+list-style-type: none;
+padding-left: 22px;
+margin-bottom: 3px;
+}
+
+
+.treeview li label{ 
+margin-bottom: 3px;
+}
+
+.treeview li.actividad{ /*Style for LI elements in general (excludes an LI that contains sub lists)*/
+background: white url(/images/lapiz.png) no-repeat left top;
+}
+
+.treeview li.submenu{ /* Style for LI that contains sub lists (other ULs). */
+background: white url(/images/closed.gif) no-repeat left 1px;
+cursor: hand !important;
+cursor: pointer !important;
+}
+
+
+.treeview li.submenu ul{ /*Style for ULs that are children of LIs (submenu) */
+display: none; /*Hide them by default. Don't delete. */
+}
+
+.treeview .submenu ul li{ /*Style for LIs of ULs that are children of LIs (submenu) */
+cursor: default;
+}
+
+input.peso{
+	text-align: center;
+	color: #2A398C;
+	background-color: white;
+        font-size: 12px;
+        font-weight:bold;
+        margin:0px;
+
+}
+input.peso_logro{
+	text-align: center;
+	color: #2E66A4;
+	background-color: white;
+        font-size: 12px;
+        font-weight:bold;
+        margin:0px;
+
+}
+input.peso_indicador{
+	text-align: center;
+	color: #049DD9;
+	background-color: white;
+        font-size: 12px;
+        font-weight:bold;
+        margin:0px;
+
+}
+input.peso_actividad{
+	text-align: center;
+	background-color: white;
+	color: #0367A6;
+        font-size: 12px;
+        font-weight:bold;
+        margin:0px;
+
+}
+
+label.carpeta{
+        cursor:pointer;
+}
+
+label.peso{
+        color: #2A398C;
+        font-size: 14px;
+        font-weight:bold;
+}
+label.peso_logro{
+	color: #2E66A4;
+        font-size: 14px;
+        font-weight:bold;
+}
+label.peso_indicador{
+	color: #049DD9;
+        font-size: 14px;
+        font-weight:bold;
+}
+label.peso_actividad{
+	color: #0367A6;
+        font-size: 14px;
+        font-weight:bold;
+}

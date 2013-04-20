@@ -17,6 +17,9 @@ gem 'ransack'
 gem 'fancybox-rails'
 gem 'simple_form'
 gem 'makandra_resource_controller'
+gem 'will_paginate'
+gem 'noty-rails'
+gem 'jquery-ui-rails'
 
 
 # Gems used only for assets and not required

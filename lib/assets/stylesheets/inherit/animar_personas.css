@@ -1,0 +1,23 @@
+/* 
+    Document   : animar_personas
+    Created on : 28-ene-2011, 15:05:59
+    Author     : Nicolas
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+.sprite{
+    width:128px;
+    height:128px;
+    background-repeat:repeat-x;
+    background-position: left top;
+}

@@ -4,5 +4,5 @@ class Question < ActiveRecord::Base
   has many :options
   belongs_to :question_type
   belongs_to :user
-  
+  has_and_belongs_to_many :sections
 end

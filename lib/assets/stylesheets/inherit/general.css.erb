@@ -1,0 +1,265 @@
+/*
+ Document   : general
+ Created on : Oct 20, 2011, 10:31:32 AM
+ Author     : jair
+ Description:
+ Contains general definitions that aren't releated with each theme'
+*/
+div.person_photo {
+    height: 210px;
+    width: 100%;
+    text-align: center;
+}
+
+div.person_photo ul {
+    list-style-type: none;
+}
+
+div.person_photo ul li {
+    text-align: center;
+}
+
+div.person_photo ul li a {
+    padding: 10px 10px 20px 10px;
+    background-color: #F9F9F9;
+    display: inline-block;
+    -moz-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -moz-box-shadow: -10px 10px 5px #999999;
+    -webkit-box-shadow: -10px 10px 5px #999999;
+    filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand',
+        M11=0.999390827019096, M12=-0.034899496702501, M21=0.034899496702501,
+        M22=0.999390827019096);  /* y la transición */
+    -webkit-transition: -webkit-transform .15s linear;
+}
+
+
+div.person_photo ul li a:hover{
+    -moz-transform: none;
+    -webkit-transform: none;
+    filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1);
+}
+
+
+#warning{
+    z-index: 51;
+}
+.warning{
+    z-index: 51;
+}
+
+a.saberes{
+    background: url(<%= asset_path 'regla.png'%>) no-repeat scroll left top transparent;
+    font-weight: bold;
+    padding-left: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+.report_filters .fields{
+    width: 140px;
+    height: 230px;
+    margin: 10px;
+    background-color: #eee;
+    overflow-y: scroll;
+    overflow-x: visible;
+    cursor: move;
+}
+.report_filters{
+    height: auto;
+    width: 160px;
+    float: left;
+}
+.report_filters ul{
+    list-style: none outside none;
+}
+.unsorteable{
+    color: #aaa;
+}
+
+p.nowrap{
+    white-space:nowrap; margin: 0; overflow: hidden
+}
+
+div.print_student{
+    page-break-after: right;
+    float:left;
+    width: 150px;
+    height: 3.3cm;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 0px;
+    border: none;
+}
+
+div.print_student p{
+    text-align: center;
+    padding-bottom: 0px;
+    margin: 0;
+}
+
+div.print_student img{
+    max-height: 300px;
+    max-width: 300px;
+    padding-top: 2px;
+}
+
+div.image {
+    float: right;
+    padding-bottom: 0px;
+    padding-top: 4px;
+    width: 80px;
+}
+
+div.a {
+    font-size: 20px;
+    font-family: Arial;
+}
+
+div.image img{
+
+
+    width: 80px;
+
+}
+
+.print{
+    color : #111;
+    background : #ffffff;
+    font-family : Georgia,"Times New Roman", Times, serif;
+    font-size : 10px;
+}
+.info div.dateselect{
+    width: 200px;
+    overflow: hidden;
+}
+.info div.dateselect select{
+    width: 60px;
+    overflow: hidden;
+}
+.rotate90 {
+
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+
+    /* IE */
+    -ms-transform: rotate(-90deg);
+
+    /* Opera */
+    -o-transform: rotate(-90deg);
+
+
+
+}
+
+.error_field{
+    color: red;
+    border-color: red;
+
+}
+
+.fullscreen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index:90;
+}
+.google-visualization-orgchart-node-medium {
+    border: 0px;
+    font-size: 12px;
+}
+.node_text{
+    font-style:italic;
+    margin: 0;
+    padding: 0;
+    width: 180px;
+}
+.percent_box{
+    padding: 0;
+    margin: 0;
+    width: 35px;
+    font-size: 12px;
+}
+.title_box{
+    font-style:italic;
+    font-size:16px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.transform_each_word{
+    text-transform:capitalize;
+}
+.google-visualization-orgchart-node-medium {
+    border: 0px !important;
+}
+.node_text{
+    font-style:italic !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 180px !important;
+}
+.percent_box{
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 35px !important;
+    font-size: 12px !important;
+}
+.title_box{
+    font-style:italic !important;
+    font-size:16px !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+}
+.powerbar{
+    text-align: right;
+	background-image:url(<%= asset_path 'regla.png'%>);
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    height: 63px;
+    width: 336px;
+    padding: 18px 5px 0 0;
+}
+.powerbar table{
+    height: 63px;
+    width: 287px;
+}
+
+.powerbar .user_fullname{
+    color:white;
+    text-transform: capitalize;
+    width: 130px;
+
+}
+
+.powerbar .user_fullname div{ 
+    margin: -5px 0 0 0;
+    width: 120px;
+    height: 17px;
+    line-height:  10px;
+    overflow: hidden;
+    padding: 10px 4px 4px 4px;
+    text-align:center;
+}
+
+.powerbar td{
+    vertical-align: top;
+}
+
+.powerbar td a:hoover{
+    background-color: #FFFFFF;
+}
+
+.album_course{
+    text-transform:capitalize;
+    height: 128px;
+    width: 128px;
+}

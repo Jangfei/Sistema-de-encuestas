@@ -1,0 +1,39 @@
+/* 
+    Document   : tabs_estudiantes
+    Created on : 22-ene-2011, 16:20:45
+    Author     : Nicolas
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+  .subsection_tabs {
+    background-color:gray;
+    clear:both;
+    margin:0px;
+    padding:0;
+    margin-left:50px;
+  }
+  .subsection_tabs a {
+    float:left;
+    margin-right:5px;
+    text-align:center;
+    color:#505050;
+    display:block;
+    font-weight: bold;
+    text-decoration:none;
+  }
+  .subsection_tabs a:hover {
+    color:#303030;
+  }
+  .subsection_tabs a.active {
+    color:blue;
+  }
+

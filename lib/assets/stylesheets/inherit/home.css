@@ -1,0 +1,50 @@
+/* 
+    Document   : home
+    Created on : 04-ene-2011, 15:01:43
+    Author     : Nicolas
+    Description: styles for home page.
+*/
+    root {
+        display: block;
+    }
+    /*tabs*/
+    .tab_panel{
+        background: url(../images/banner.png) no-repeat center top;
+        color:white;
+        width:502px;
+        height:302px;
+        padding:30px 10px 30px 50px;
+        margin:0px;
+        display:none;
+    }
+    .subsection_tabs {
+        clear:both;
+        height:16px;
+        list-style-image:none;
+        list-style-position:outside;
+        list-style-type:none;
+        margin:0px;
+        padding:0;
+        margin-left:200px;
+    }
+    .subsection_tabs a {
+        background: url(../images/selection.png) no-repeat center top;
+        color:#FFF;
+        display:block;
+        height:16px;
+        padding:0px;
+	font-weight: bold;
+        font-size:11px;
+        text-decoration:none;
+        float:left;
+        margin-right:5px;
+        text-align:center;
+    }
+    .subsection_tabs a:hover {
+        color:#FFFF00;
+    }
+    .subsection_tabs a.active {
+        background: url(../images/selection_select.png) no-repeat center top;
+        color:#31CCFF;
+    }
+
