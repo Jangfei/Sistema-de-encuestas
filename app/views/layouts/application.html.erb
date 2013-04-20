@@ -14,7 +14,7 @@
 			
 			
 			<div id="header">
-				<h1><%= t("Sistema Encuestas") -%></h1>
+				<h2><%= t("Sistema Encuestas") -%></h2>
 			</div>
 		</div>
 		<div class="container showgrids" id="bodys">
@@ -25,9 +25,6 @@
 				<%= yield %>
 			</div>
 			<div id="sub_content" class="span-6 last prepend-1  prepend-top">
-				<div id="wait">
-					<%= t(:sending) +  image_tag("loading.gif") %>
-				</div>
 				<%= yield :sidebar %>
 			</div>
 

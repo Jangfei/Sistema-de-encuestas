@@ -8,6 +8,13 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require fancybox
  *= require_self
+ *= require inherit/screen.css
+ *= require inherit/print
+ *= require inherit/general
+ *= require inherit/saberes
+ *= require inherit/saberes_menu
+ *= require inherit/menu_style
+ *= require fancybox
+ *= require jquery.ui.all
  */
