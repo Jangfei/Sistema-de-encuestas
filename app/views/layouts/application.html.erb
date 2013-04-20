@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SistemaEncuestas</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title>SaberesCartera</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= javascript_include_tag params[:controller] rescue ''%>
+		<%= stylesheet_link_tag params[:controller] rescue '' %>
+		<%= csrf_meta_tags %>
 
-<%= yield %>
+	</head>
+	<body>
+		<div id="containerHeader" class="container prepend-top">
+			
+			
+			<div id="header">
+				<h1><%= t("Sistema Encuestas") -%></h1>
+			</div>
+		</div>
+		<div class="container showgrids" id="bodys">
+			<div id="menu-ppal" class="span-22 last prepend-2 prepend-top">
+				<%#= render(:partial => "compartido/barra") %>
+			</div>
+			<div id="main_content" class="span-15 prepend-1 border prepend-top">
+				<%= yield %>
+			</div>
+			<div id="sub_content" class="span-6 last prepend-1  prepend-top">
+				<div id="wait">
+					<%= t(:sending) +  image_tag("loading.gif") %>
+				</div>
+				<%= yield :sidebar %>
+			</div>
 
-</body>
+		</div>
+		<div class='hidden'>
+			<% if flash[:notice] -%>
+			<p id='notice'>
+				<%= flash[:notice] -%>
+			</p>
+			<% flash.discard() %>
+			<% end -%>
+		</div>
+	</body>
+
 </html>

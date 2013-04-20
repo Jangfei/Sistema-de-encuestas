@@ -1,0 +1,42 @@
+/* 
+    Document   : programas
+    Created on : 17-ene-2011, 16:36:52
+    Author     : Nicolas
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+#accordion h3 {
+    background-image: url(../images/lapiz_1.png);
+    background-repeat:no-repeat;
+    height:26px;
+    font-size:16px;
+    margin:0px;
+    padding:0px;
+    padding-top:2px;
+    padding-left:10px;
+}
+#accordion h3 a{
+    color:white;
+}
+
+#accordion .contenido{
+    padding:0px;
+    margin:0px;
+    border:0px;
+    width:526px;
+    height: 237px;
+    padding-top: 350px;
+    padding-left: 20px;
+    display:none;
+    color:black;
+}
