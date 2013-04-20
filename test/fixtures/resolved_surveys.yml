@@ -1,7 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  nombre: MyString
+  fecha_resolucion: 2013-04-20
+  question_id: 1
 
 two:
-  nombre: MyString
+  fecha_resolucion: 2013-04-20
+  question_id: 1

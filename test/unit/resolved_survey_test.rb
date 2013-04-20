@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TipoPreguntaTest < ActiveSupport::TestCase
+class ResolvedSurveyTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
