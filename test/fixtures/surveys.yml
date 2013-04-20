@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre_encuesta: MyString
+  fecha_creacion: 2013-04-20
+  user_id: 1
+
+two:
+  nombre_encuesta: MyString
+  fecha_creacion: 2013-04-20
+  user_id: 1
