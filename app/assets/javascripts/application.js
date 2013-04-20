@@ -16,6 +16,8 @@
 //= require jquery_ujs
 //= require noty/jquery.noty
 //= require noty/layouts/top
+//= require jquery.validate
+//= require jquery.validate.additional-methods
 //= require noty/themes/default
 //= require_self
 

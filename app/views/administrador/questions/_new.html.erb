@@ -1,0 +1,8 @@
+  <%= simple_form_for(@object, :url => collection_url, :remote => is_xhr?) do |f| %>
+	<fieldset>
+	<legend>Crear pregunta</legend>
+	    <%= render :partial => "form", :locals => { :f => f } %>
+	</fieldset>
+		<%= f.button :submit %>
+		<%= cancel_button_tag(collection_url)%>
+  <% end %>
