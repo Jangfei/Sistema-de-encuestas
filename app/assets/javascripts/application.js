@@ -14,8 +14,6 @@
 //= require fancybox
 //= require jquery.ui.all
 //= require jquery_ujs
-//= require jquery.validate
-//= require jquery.validate.additional-methods
 //= require noty/jquery.noty
 //= require noty/layouts/top
 //= require noty/themes/default
