@@ -6,7 +6,7 @@
 <div class="info">
     <h2>Opciones</h2>
     <ul>
-    	<%= link_to "Crear pregunta", new_object_url(), :rel=>"lightbox"%>
+    	<%= link_to "Crear encuesta", new_object_url(), :rel=>"lightbox"%>
     </ul>
     
 </div>
@@ -16,7 +16,9 @@
         <tr>
             <th></th>
             <th> ID </th>
-            <th>Descripcion</th>
+            <th>Nombre de la encuesta</th>
+            <th>Fecha de creacion</th>
+            <th></th>
         </tr>
     </thead>
     <tbody id="<%= list_id-%>">
