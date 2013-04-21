@@ -1,3 +1,6 @@
+require 'ajax_default_resource'
+
+
 class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :is_xhr?
