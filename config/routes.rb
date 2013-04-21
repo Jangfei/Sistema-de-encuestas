@@ -4,7 +4,7 @@ SistemaEncuestas::Application.routes.draw do
   
     namespace "administrador" do
       resources :questions
-      resources :seccions
+      resources :sections
     end
 
     namespace "usuario" do
