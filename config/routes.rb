@@ -3,7 +3,8 @@ SistemaEncuestas::Application.routes.draw do
   match "/", :controller=> "start", :action => 'index'
   
     namespace "administrador" do
-      resources :seccions
+      resources :questions
+      resources :sections
     end
 
     namespace "usuario" do
