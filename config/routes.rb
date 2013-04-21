@@ -4,7 +4,11 @@ SistemaEncuestas::Application.routes.draw do
   
     namespace "administrador" do
       resources :questions
+
       resources :surveys
+
+      resources :sections
+
     end
 
     namespace "usuario" do

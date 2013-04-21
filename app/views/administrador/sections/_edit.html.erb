@@ -1,6 +1,6 @@
   <%= simple_form_for(@object, :url => object_url(@object), :remote => is_xhr?, :method => :put) do |f| %>
 	<fieldset>
-		<legend>Editar encuesta</legend>
+		<legend>Editar seccion/legend>
 	    <%= render :partial => "form", :locals => { :f => f } %>
 	</fieldset>
 		<%= f.button :submit %>
