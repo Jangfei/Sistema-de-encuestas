@@ -1,0 +1,82 @@
+es:
+  successfully_removed: Eliminación exitosa
+  successfully_created: Registro exitoso
+  successfully_updated: Actualización exitosa
+  start: "Inicio"
+  simple_form:
+    "yes": 'Sí'
+    "no": 'No'
+    required:
+      text: ''
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      html: '<span title="Obligatorio">*</span>'
+    error_notification:
+      default_message: "Se han encontrado algunos errores. Por favor revíselos:"
+
+
+    labels:
+      
+      q:
+        student_full_name_cont: "Nombre estudiante"
+        guardian_full_name_cont: "Nombre acudiente"
+        section_id_eq: "Sección"
+        grade_id_eq: "Grado"
+        billing_year_id_eq: "Año lectivo"
+      student:
+        billing_year_id: "Año lectivo"
+      concept_year:
+        billing_year: "Año lectivo"
+        selection_mode: "Selección de valores por"
+      concept:
+        code_concept: "Código de concepto"
+        description: "Descripción"
+        imputation: "Imputación"
+        periodicity: "Periodicidad"
+        credit_account_name: "Cuenta crédito"
+        debit_account_name: "Cuenta débito"
+        cost_center_name: "Centro de costo"
+        deductible: "Deducible"
+        discount: "Beca o descuento"
+        percentage: "Porcentaje"
+        related_concept_name: "Concepto relacionado"
+      payment_period:
+        period: "Fecha de expedición"
+        limit_date: "Fecha de vencimiento"
+        due_date: "Fecha de corte"
+        billing_year: "Año lectivo"
+      billing_year:
+        name: "Nombre"
+        billing_to: "Facturar a"
+        billing_by: "Facturado por"
+        academic_years: "Años académicos" 
+      center:
+        number_center: "Código"
+        description: "Descripción"
+      account:
+        account_name: "Nombre de la cuenta"
+        account_number: "Código"
+        center_req: "¿Requiere centro de costos?"
+        third_party_req: "¿Asociado a un tercero?" 
+        percentage_associated: "¿Porcentaje asociado?"
+        nature: "Naturaleza"  
+        debit: "Débito"
+        credit: "Crédito"
+      billing_operation:
+        periodicity: "Periodicidad"
+        billing_year_id: "Año lectivo"
+        payment_period: "Periodo de pago"
+        
+          
+         
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+

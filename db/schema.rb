@@ -34,13 +34,6 @@ ActiveRecord::Schema.define(:version => 20130420171602) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "question_sections", :force => true do |t|
-    t.integer  "question_id"
-    t.integer  "section_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "question_types", :force => true do |t|
     t.string   "descripcion"
     t.datetime "created_at",  :null => false
@@ -55,6 +48,13 @@ ActiveRecord::Schema.define(:version => 20130420171602) do
     t.datetime "updated_at",       :null => false
   end
 
+  create_table "questions_sections", :force => true do |t|
+    t.integer  "question_id"
+    t.integer  "section_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "resolved_surveys", :force => true do |t|
     t.date     "fecha_resolucion"
     t.integer  "question_id"
@@ -62,16 +62,16 @@ ActiveRecord::Schema.define(:version => 20130420171602) do
     t.datetime "updated_at",       :null => false
   end
 
-  create_table "section_surveys", :force => true do |t|
-    t.integer  "survey_id"
-    t.integer  "section_id"
+  create_table "sections", :force => true do |t|
+    t.string   "nombre"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "sections", :force => true do |t|
-    t.string   "nombre"
-    t.integer  "user_id"
+  create_table "sections_surveys", :force => true do |t|
+    t.integer  "survey_id"
+    t.integer  "section_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -82,12 +82,6 @@ ActiveRecord::Schema.define(:version => 20130420171602) do
     t.integer  "user_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-  end
-
-  create_table "tipo_pregunta", :force => true do |t|
-    t.string   "nombre"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

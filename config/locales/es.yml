@@ -1,0 +1,60 @@
+es: 
+  activerecord:
+    errors:
+      messages:
+        record_invalid: Datos no válidos %{errors}
+  errors:  
+    messages:
+      taken: "Existe otro registro con este dato"
+      invalid: 'Formato no válido'
+      blank:  "Requerido"
+  
+  date:
+    month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
+    formats:
+      month_year: "%B de %Y"
+  
+  resource_controller:
+    successfully_removed: Eliminación exitosa
+    successfully_created: Registro exitoso
+    successfully_updated: Actualización exitosa
+    unsuccessfully_updated: No se pudo actualizar
+    unsuccessfully_created: No se pudo crear
+    member_object_not_found: Objeto no encontrado
+    failure_destroy: "No se pudo eliminar el objeto. %{message}"
+  
+  will_paginate:
+    previous_label: "&#8592; Anterior"
+    next_label: "Siguiente &#8594;"
+    page_gap: "&hellip;"
+  
+  helpers:
+    submit:
+      create: 'Guardar'
+      update: 'Actualizar'
+   
+  help: "Ayuda"
+  "yes": "Sí"
+ 
+  creation: "Creación"
+ 
+  create_record: "Crear %{record_name}"
+  edit_record: "Editar %{record_name}"
+ 
+  show: "Detallar"
+  cancel: "Cancelar"
+  delete_register: "¿Está seguro de eliminar este ítem?"
+  description: "Descripción"
+  edit: "Editar"
+  name: "Nombre"
+  register: "Registrar"
+  save: "Guardar"
+  delete: "Eliminar"
+  options: "Opciones"
+  update: "Guardar"
+  submit: "Actualizar"
+  list_count: "Registros encontrados"
+  search: "Buscar"
+  "no": "No"
+  section: "Sección"
+  value: "Valor"
