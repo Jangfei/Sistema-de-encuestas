@@ -6,6 +6,7 @@ SistemaEncuestas::Application.routes.draw do
       resources :questions
       resources :surveys
       resources :sections
+      resources :resolved_surveys
 
     end
 

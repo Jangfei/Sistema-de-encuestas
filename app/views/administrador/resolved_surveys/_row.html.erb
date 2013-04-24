@@ -1,0 +1,8 @@
+<% item = row if row %>
+<tr id="<%= dom_id(item)%>" style='<%= defined?(hide) ? "display:none" : '' -%>'  >
+	
+	<td><%= item.id %></td>
+	<td><%= item.name-%></td>
+	<td><%=item.fecha_creacion%></td>
+	<td><%=item.fecha_resolucion%></td>
+</tr>
