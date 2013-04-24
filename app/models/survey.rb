@@ -3,6 +3,8 @@ class Survey < ActiveRecord::Base
   belongs_to :user
   has_many :resolved_surveys
   has_and_belongs_to_many :sections
-  
+  validates :nombre_encuesta, :presence => true
+  validates :fecha_creacion, :presence => true
+
 
 end
