@@ -7,27 +7,5 @@ class Question < ActiveRecord::Base
   has_and_belongs_to_many :sections
 
 validates :descripcion, :presence => true
->> p = Question.new
-=> #<Question id: nil, name: nil>
->> p.errors
-=> {}
->> p.valid?
-=> false
->> p.errors
-=> {:descripcion=>["no puede estar en blanco"]}
- 
->> p = Question.create
-=> #<Question id: nil, name: nil>
->> p.errors
-=> {:descripcion=>["no puede estar en blanco"]}
- 
->> p.save
-=> false
- 
->> p.save!
-=> ActiveRecord::RecordInvalid: Validation failed: Descripcion no puede estar en blanco
- 
->> Question.create!
-=> ActiveRecord::RecordInvalid: Validation failed: Descripcion no puede estar en blanco
 end
 

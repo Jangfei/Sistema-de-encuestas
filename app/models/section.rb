@@ -6,28 +6,5 @@ class Section < ActiveRecord::Base
   
 
 validates :nombre, :presence => true
->> p = Section.new
-=> #<Section id: nil, name: nil>
->> p.errors
-=> {}
->> p.valid?
-=> false
->> p.errors
-=> {:nombre=>["no puede estar en blanco"]}
- 
->> p = Section.create
-=> #<Section id: nil, name: nil>
->> p.errors
-=> {:nombre=>["no puede estar en blanco"]}
- 
->> p.save
-=> false
- 
->> p.save!
-=> ActiveRecord::RecordInvalid: Validation failed:  Nombre no puede estar en blanco
- 
->> Section.create!
-=> ActiveRecord::RecordInvalid: Validation failed: Nombre no puede estar en blanco
-
 
 end
