@@ -1,2 +1,10 @@
-<%= f.input :descripcion %>
-<%= f.association :question_type, :label_method => :descripcion %>
+<fieldset>
+    <legend>Crear pregunta</legend>
+        <%= f.input :descripcion %>
+        <%= f.association :question_type, :label_method => :to_s, :include_blank => false %>
+</fieldset>
+<fieldset>
+    <legend>Asociar secciones</legend>
+    <%= f.association :sections, :as => :check_boxes, :label_method => :nombre, :include_blank => false %>
+</fieldset>
+

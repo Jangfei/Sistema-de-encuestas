@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-["abierta", "opcion_multiple"].each do |s|
-  QuestionType.create(:descripcion => s)
+
+QuestionType::TIPOS.each do |s|
+  QuestionType.where(:descripcion => s).first_or_create!
 end
+

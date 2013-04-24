@@ -48,12 +48,12 @@ ActiveRecord::Schema.define(:version => 20130420171602) do
     t.datetime "updated_at",       :null => false
   end
 
-  create_table "questions_sections", :force => true do |t|
-    t.integer  "question_id"
-    t.integer  "section_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+  create_table "questions_sections", :id => false, :force => true do |t|
+    t.integer "question_id"
+    t.integer "section_id"
   end
+
+  add_index "questions_sections", ["question_id", "section_id"], :name => "index_questions_sections_on_question_id_and_section_id", :unique => true
 
   create_table "resolved_surveys", :force => true do |t|
     t.date     "fecha_resolucion"
@@ -69,12 +69,12 @@ ActiveRecord::Schema.define(:version => 20130420171602) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "sections_surveys", :force => true do |t|
-    t.integer  "survey_id"
-    t.integer  "section_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "sections_surveys", :id => false, :force => true do |t|
+    t.integer "survey_id"
+    t.integer "section_id"
   end
+
+  add_index "sections_surveys", ["survey_id", "section_id"], :name => "index_sections_surveys_on_survey_id_and_section_id", :unique => true
 
   create_table "surveys", :force => true do |t|
     t.string   "nombre_encuesta"

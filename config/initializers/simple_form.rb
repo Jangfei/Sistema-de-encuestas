@@ -15,7 +15,7 @@ SimpleForm.setup do |config|
 
     # Determines whether to use HTML5 (:email, :url, ...)
     # and required attributes
-    b.use :html5
+    #b.use :html5
 
     # Calculates placeholders automatically from I18n
     # You can also pass a string as f.input :placeholder => "Placeholder"
@@ -52,7 +52,7 @@ SimpleForm.setup do |config|
   # Defaults to :nested for bootstrap config.
   #   :inline => input + label
   #   :nested => label > input
-  config.boolean_style = :nested
+  config.boolean_style = :inline
 
   # Default class for buttons
   config.button_class = 'btn'
@@ -77,16 +77,15 @@ SimpleForm.setup do |config|
   # Series of attempts to detect a default value method for collection.
   # config.collection_value_methods = [ :id, :to_s ]
 
-  # You can wrap a collection of radio/check boxes in a pre-defined tag, defaulting to none.
-  # config.collection_wrapper_tag = nil
+   config.collection_wrapper_tag = :ol
 
   # You can define the class to use on all collection wrappers. Defaulting to none.
-  # config.collection_wrapper_class = nil
+  config.collection_wrapper_class = :checkbox_wrapper
 
   # You can wrap each item in a collection of radio/check boxes with a tag,
   # defaulting to :span. Please note that when using :boolean_style = :nested,
   # SimpleForm will force this option to be a label.
-  # config.item_wrapper_tag = :span
+  config.item_wrapper_tag = :li
 
   # You can define a class to use in all item wrappers. Defaulting to none.
   # config.item_wrapper_class = nil
@@ -129,7 +128,7 @@ SimpleForm.setup do |config|
   # config.country_priority = nil
 
   # Default size for text inputs.
-  # config.default_input_size = 50
+  config.default_input_size = 30
 
   # When false, do not use translations for labels.
   # config.translate_labels = true

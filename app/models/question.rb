@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
-  attr_accessible :descripcion, :question_type_id, :user_id
+  attr_accessible :descripcion, :question_type_id, :user_id, :section_ids
   has_many :answers
   has_many :options
   belongs_to :question_type

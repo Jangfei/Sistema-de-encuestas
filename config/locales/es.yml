@@ -58,3 +58,6 @@ es:
   "no": "No"
   section: "Sección"
   value: "Valor"
+  abierta: "Abierta"
+  opcion_multiple: "Opción múltiple"
+  falso_verdadero: "Falso o verdadero"

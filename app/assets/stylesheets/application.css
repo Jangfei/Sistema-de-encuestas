@@ -18,3 +18,81 @@
  *= require fancybox
  *= require jquery.ui.all
  */
+
+.simple_form div.input {
+  margin-bottom: 10px;
+  display: table;
+  clear: both; /* Required for Webkit, but not for Gecko */
+}
+
+.simple_form label {
+  float: left;
+  width: 150px;
+  text-align: right;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+div.boolean label, label.collection_radio_buttons {
+  float: none;
+  margin: 0;
+}
+
+label.collection_radio_buttons {
+  margin-right: 10px;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+}
+
+.field_with_errors {
+  background-color: #ff3333;
+}
+
+.simple_form .error {
+  clear: left;
+  color: black;
+  display: block;
+  margin-left: 120px;
+}
+
+.simple_form .hint {
+  clear: left;
+  margin-left: 120px;
+  color: #555;
+  display: block;
+  font-style: italic;
+}
+
+.simple_form ol.checkbox_wrapper{
+    list-style-type: none;
+    margin-left: 160px;
+    
+}
+.simple_form .checkbox_wrapper li{
+    white-space: pre;
+}
+
+.simple_form .radio {
+  margin-right: 5px;
+  vertical-align: -8px;
+}
+
+.simple_form .check_boxes {
+  margin-left: 3px;
+  vertical-align: -4px;
+}
+
+label.collection_check_boxes, label.checkbox {
+  float: none;
+  margin: 0;
+  vertical-align: -2px;
+  margin-left: 2px;
+}
+
+.hidden {
+    display: none !important;
+    
+}
+table.azul tr:nth-child(2n) td, tables.azul tr.even td{
+    background-color: #FAFAFA;  
+}

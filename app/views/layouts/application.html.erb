@@ -30,13 +30,14 @@
 
 		</div>
 		<div class='hidden'>
-			<% if flash[:notice] -%>
-			<p id='notice'>
-				<%= flash[:notice] -%>
-			</p>
-			<% flash.discard() %>
-			<% end -%>
-		</div>
+            <% if flash[:notice] -%>
+            <p id='notice'>
+                <%= flash[:notice] -%>
+            </p>
+            <% flash.discard() %>
+            <% end -%>
+        </div>
+
 	</body>
 
 </html>

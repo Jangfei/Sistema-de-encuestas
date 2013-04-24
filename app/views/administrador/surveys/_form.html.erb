@@ -1,1 +1,11 @@
-<%= f.input :nombre_encuesta %>
+
+<fieldset>
+    <legend>Crear encuesta</legend>
+        <%= f.input :nombre_encuesta %>
+</fieldset>
+<fieldset>
+    <legend>Asociar secciones</legend>
+    <%= f.association :sections, :as => :check_boxes, :label_method => :nombre, :include_blank => false %>
+
+</fieldset>
+
