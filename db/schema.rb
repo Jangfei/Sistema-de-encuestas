@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20130420171602) do
 
   create_table "resolved_surveys", :force => true do |t|
     t.date     "fecha_resolucion"
-    t.integer  "question_id"
+    t.integer  "survey_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

@@ -10,6 +10,10 @@ SistemaEncuestas::Application.routes.draw do
     end
 
     namespace "usuario" do
+      resources :surveys do
+        resources :resolved_surveys
+      end
+     
     end
 
   match "/:action", :controller=> "start"

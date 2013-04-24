@@ -1,1 +1,32 @@
- <%= render :partial => "index" %>
+<h3><%= link_to "Inicio", {:controller => "/start"},{} -%>&rarr; 
+<%= link_to "Usuario", {:controller => "/start", :action => "usuario"},{} -%>&rarr;
+<%= link_to "Encuestas" -%></h3>
+
+<% content_for :sidebar do %>
+<div class="info">
+    <h2>Opciones</h2>
+    
+</div>
+<%end %>
+<table class="azul">
+    <thead>
+        <tr>
+            <th></th>
+            <th> ID </th>
+            <th>Nombre de la encuesta</th>
+            <th>Fecha de creacion</th>
+        </tr>
+    </thead>
+    <tbody id="<%= list_id-%>">
+        <%= render :partial => "row", :collection=> @collection %>
+    </tbody>
+     <tfoot id="<%= footer_id%>">
+        <tr>
+            <th colspan="4">
+                <%= render :partial => 'shared/pagination_counter', :locals => {:collection=> @collection} -%>
+            </th>
+        </tr>
+    </tfoot>
+</table>
+
+

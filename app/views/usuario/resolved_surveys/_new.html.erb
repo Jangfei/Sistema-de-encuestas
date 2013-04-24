@@ -1,0 +1,26 @@
+<%= simple_form_for(@object, :url => collection_url, :remote => is_xhr?) do |f| %>
+
+    <% parent_object.sections.each do |s| %>
+        <fieldset>
+            <legend>
+                <%= s.nombre %>
+            </legend>
+            
+            <% s.questions.each do |q| %>
+                <% answer = @object.answers.detect {|a| a.question_id == q.id}%>
+                <%=  f.simple_fields_for :answers, answer do |answers_form| %>
+           
+                        <div class="input">
+                            <label><%= q.descripcion %></label>
+                            <%= answers_form.input_field :descripcion %>
+                        </div>
+                        <%= answers_form.input :question_id, :as => :hidden %>
+                <% end %>
+            <%end%>
+        </fieldset>
+    <% end%>
+
+    <%= f.button :submit %>
+    <%= cancel_button_tag(usuario_surveys_url)%>
+
+<% end %>
