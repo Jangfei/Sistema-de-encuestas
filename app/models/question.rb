@@ -5,4 +5,7 @@ class Question < ActiveRecord::Base
   belongs_to :question_type
   belongs_to :user
   has_and_belongs_to_many :sections
+
+validates :descripcion, :presence => true
 end
+
