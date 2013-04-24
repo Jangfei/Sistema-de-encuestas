@@ -1,4 +1,6 @@
 <fieldset>
   <legend><%= t(:show)%> </legend>
   
+  <%= link_to(image_tag("edit.gif",
+	:border=>0, :alt => t(:show), :title=>t(:show)), object_url(item), :rel =>:lightbox)-%>
 </fieldset>
