@@ -4,4 +4,5 @@ class Survey < ActiveRecord::Base
   has_many :resolved_surveys
   has_and_belongs_to_many :sections
   
+
 end
