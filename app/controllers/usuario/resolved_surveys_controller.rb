@@ -8,7 +8,7 @@ class Usuario::ResolvedSurveysController < ApplicationController
     
     object.survey.sections.each do |s|
       s.questions.each do |q|
-        object.answers.build(:question_id => q.id)
+        object.answers.build(:question_id => q.id, :section_id => s.id)
       end
     end
     
@@ -17,6 +17,7 @@ class Usuario::ResolvedSurveysController < ApplicationController
   create.before do
     object.fecha_resolucion = Date.today
   end
+  
   create do
     wants.html {
        redirect_to usuario_surveys_url

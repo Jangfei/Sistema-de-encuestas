@@ -1,6 +1,7 @@
 <h3><%= link_to "Inicio", {:controller => "/start"},{} -%>&rarr; 
 <%= link_to "Administrador", {:controller => "/start", :action => "administrador"},{} -%>&rarr;
-<%= link_to "Ver Encuestas" -%></h3>
+<%= link_to "Encuesta - #{parent_object.nombre_encuesta}", administrador_surveys_url -%>&rarr;
+<%= link_to "Resultados" -%></h3>
 
 <% content_for :sidebar do %>
 
@@ -9,10 +10,8 @@
     <thead>
         <tr>
             <th></th>
-            <th> ID </th>
-            <th>Nombre de la encuesta</th>
-            <th>Fecha de creacion</th>
-            <th></th>
+            <th>ID resultado</th>
+            <th>Fecha de respuesta</th>
         </tr>
     </thead>
     <tbody id="<%= list_id-%>">

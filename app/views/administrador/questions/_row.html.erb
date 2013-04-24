@@ -5,7 +5,10 @@
 	:border=>0, :alt => t(:edit), :title=>t(:edit)), edit_object_url(item), :rel =>:lightbox)-%>
 	<%= link_to(image_tag("anular.gif",
 	:border=>0, :alt => t(:delete), :title=>t(:delete)), object_url(item), :method => :delete, :confirm => t(:delete_register), :remote => true)-%>
-	
+	<% if item.question_type.descripcion == QuestionType::OPCION_MULTIPLE %>
+	<%= link_to(image_tag("options.gif",
+    :border=>0, :alt => t(:edit), :title=>t(:edit)), administrador_question_options_url(item), :rel =>:lightbox)-%>
+    <%end%>
 	</td>
 	<td><%= item.id %></td>
 	<td><%= item.descripcion-%></td>

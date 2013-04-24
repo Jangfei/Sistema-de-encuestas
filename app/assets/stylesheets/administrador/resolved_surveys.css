@@ -2,3 +2,27 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+div.input {
+  margin-bottom: 10px;
+  display: table;
+  clear: both; /* Required for Webkit, but not for Gecko */
+}
+
+div.input label {
+  float: left;
+  width: 150px;
+  text-align: right;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+div.input {
+  margin-bottom: 10px;
+  display: table;
+  clear: both; /* Required for Webkit, but not for Gecko */
+}
+
+div.input span {
+  vertical-align: sub;
+}

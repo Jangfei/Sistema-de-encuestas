@@ -7,14 +7,9 @@
             </legend>
             
             <% s.questions.each do |q| %>
-                <% answer = @object.answers.detect {|a| a.question_id == q.id}%>
+                <% answer = @object.answers.detect {|a| a.question_id == q.id and a.section_id == s.id }%>
                 <%=  f.simple_fields_for :answers, answer do |answers_form| %>
-           
-                        <div class="input">
-                            <label><%= q.descripcion %></label>
-                            <%= answers_form.input_field :descripcion %>
-                        </div>
-                        <%= answers_form.input :question_id, :as => :hidden %>
+                    <%= render :partial => "form", :locals => { :f => answers_form, :question => q } %>
                 <% end %>
             <%end%>
         </fieldset>

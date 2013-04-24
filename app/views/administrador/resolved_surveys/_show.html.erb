@@ -1,6 +1,23 @@
+<h3><%= object.survey.nombre_encuesta %> </h3>
+<% parent_object.sections.each do |s| %>
 <fieldset>
-  <legend><%= t(:show)%> </legend>
-  
-  <%= link_to(image_tag("edit.gif",
-	:border=>0, :alt => t(:show), :title=>t(:show)), object_url(item), :rel =>:lightbox)-%>
+    <legend>
+        <%= s.nombre %>
+    </legend>
+
+    <% s.questions.each do |q| %>
+    <% answer = @object.answers.detect {|a| a.question_id == q.id and a.section_id == s.id}%>    
+
+    <div class="input">
+        <label><%= q.descripcion + ": " %></label>
+        <% if q.question_type.descripcion == QuestionType::TEXTO %>
+            <textarea disabled="disabled"><%= answer.descripcion %></textarea>
+        <% else%>
+            <span><%= answer.descripcion %></span>
+        <% end%>
+        
+    </div>
+    <%end%>
 </fieldset>
+<% end%>
+

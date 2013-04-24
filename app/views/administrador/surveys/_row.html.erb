@@ -5,7 +5,8 @@
 	:border=>0, :alt => t(:edit), :title=>t(:edit)), edit_object_url(item), :rel =>:lightbox)-%>
 	<%= link_to(image_tag("anular.gif",
 	:border=>0, :alt => t(:delete), :title=>t(:delete)), object_url(item), :method => :delete, :confirm => t(:delete_register), :remote => true)-%>
-	
+	<%= link_to(image_tag("resolved.png",
+    :border=>0, :alt => "Encuestas resueltas", :title=>"Encuestas resueltas"), administrador_survey_resolved_surveys_url(item))-%>
 	</td>
 	<td><%= item.id %></td>
 	<td><%= item.nombre_encuesta-%></td>

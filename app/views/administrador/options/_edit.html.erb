@@ -1,0 +1,10 @@
+  <%= simple_form_for(@object, :url => object_url(@object), :remote => is_xhr?, :method => :put) do |f| %>
+	<fieldset>
+		<legend>Editar opción</legend>
+	    <%= render :partial => "form", :locals => { :form => f } %>
+	</fieldset>
+		<%= f.button :submit %>
+		<%= button_tag t(:cancel), :type => "button", :id => "cancel_button" -%>
+		<%= link_to "hidden", collection_url, :rel => :lightbox, :class => "hidden" %>
+  <% end %>
+

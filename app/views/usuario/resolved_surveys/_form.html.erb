@@ -1,1 +1,19 @@
-<%= f.input :nombre_encuesta %>
+<div class="input">
+    <label><%= question.descripcion %></label>
+    <% if question.question_type.descripcion == QuestionType::ABIERTA %>
+        <%= f.input_field :descripcion, :as => :string %>
+    <% elsif question.question_type.descripcion == QuestionType::TEXTO %>
+        <%= f.input_field :descripcion, :as => :text %>
+    <% elsif question.question_type.descripcion == QuestionType::FALSO_VERDADERO %>
+        <%= f.input_field :descripcion, :collection => ["verdadero", "falso"], :as => :radio_buttons %>
+    <% elsif question.question_type.descripcion == QuestionType::OPCION_MULTIPLE %>
+        <%= f.input_field :descripcion, :collection => question.options, :label_method => :descripcion, :value_method => :descripcion,:as => :radio_buttons %>
+    <% end%>
+
+</div>
+<%= f.input :question_id, :as => :hidden %>
+<%= f.input :section_id, :as => :hidden %>
+
+
+
+

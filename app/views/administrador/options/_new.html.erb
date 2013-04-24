@@ -1,0 +1,9 @@
+  <%= simple_form_for(@object, :url => collection_url, :remote => is_xhr?) do |f| %>
+	<fieldset>
+	<legend>Crear opción</legend>
+	    <%= render :partial => "form", :locals => { :form => f } %>
+	</fieldset>
+		<%= f.button :submit %>
+		<%= button_tag t(:cancel), :type => "button", :id => "cancel_button" -%>
+        <%= link_to "hidden", collection_url, :rel => :lightbox, :class => "hidden" %>
+  <% end %>
