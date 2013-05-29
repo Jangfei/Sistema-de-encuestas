@@ -4,7 +4,7 @@ class Usuario::SurveysController < ApplicationController
   
   index do 
     wants.json {
-      render :json => @search.result
+      render :json => @search.result.to_json(:include => {:sections => {:questions => :options}})
     }
   end
 end
