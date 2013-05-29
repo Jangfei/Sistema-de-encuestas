@@ -1,0 +1,79 @@
+<script type="text/javascript">
+    // Load the Visualization API and the controls package.
+    google.load('visualization', '1.0', {
+        'packages' : ['controls']
+    });
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.setOnLoadCallback(drawDashboard);
+
+    // Callback that creates and populates a data table,
+    // instantiates a dashboard, a range slider and a pie chart,
+    // passes in the data and draws it.
+    var chart_data =  
+ <%= @data %>
+    ;
+
+    function drawDashboard() {
+
+        // Create our data table.
+        var data = google.visualization.arrayToDataTable(chart_data);
+
+        // Create a dashboard.
+        var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
+
+        // Create a range slider, passing some options
+        var donutRangeSlider = new google.visualization.ControlWrapper({
+            'controlType' : 'CategoryFilter',
+            'containerId' : 'filter_div',
+            'options' : {
+                'filterColumnLabel' : 'Pregunta',
+                'ui' : {
+                    'allowTyping' : false,
+                    'allowMultiple' : false
+                }
+            }
+        });
+
+        // Create a pie chart, passing some options
+        var pieChart = new google.visualization.ChartWrapper({
+            'chartType' : 'PieChart',
+            'containerId' : 'chart_div',
+            'view' : {
+                'columns' : [1, 2]
+            },
+            'options' : {
+                'width' : 400,
+                'height' : 400,
+                'pieSliceText' : 'label',
+                'legend' : 'right'
+            }
+        });
+
+        // Establish dependencies, declaring that 'filter' drives 'pieChart',
+        // so that the pie chart will only display entries that are let through
+        // given the chosen slider range.
+        dashboard.bind(donutRangeSlider, pieChart);
+
+        // Draw the dashboard.
+        dashboard.draw(data);
+    }
+</script>
+<h3><%= link_to "Inicio", {:controller => "/start"},{} -%>&rarr;
+<%= link_to "Administrador", {:controller => "/start", :action => "administrador"},{} -%>&rarr;
+<%= link_to "Encuesta - #{parent_object.nombre_encuesta}", administrador_surveys_url -%>&rarr;
+<%= link_to "Estadísticas" -%></h3>
+<br />
+
+<% content_for :sidebar do %>
+<div class="info">
+    <h2>Opciones</h2>
+</div>
+<%end %>
+
+<div id="dashboard_div">
+    <!--Divs that will hold each control and chart-->
+    <div id="filter_div"></div>
+    <div id="chart_div"></div>
+</div>
+

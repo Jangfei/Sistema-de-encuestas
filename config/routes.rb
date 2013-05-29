@@ -7,7 +7,11 @@ SistemaEncuestas::Application.routes.draw do
         resources :options
       end
       resources :surveys do
-        resources :resolved_surveys
+        resources :resolved_surveys do
+          collection do
+            get "charts"
+          end
+        end
       end
       resources :sections
       

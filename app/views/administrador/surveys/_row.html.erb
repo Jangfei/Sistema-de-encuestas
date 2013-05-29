@@ -7,6 +7,8 @@
 	:border=>0, :alt => t(:delete), :title=>t(:delete)), object_url(item), :method => :delete, :confirm => t(:delete_register), :remote => true)-%>
 	<%= link_to(image_tag("resolved.png",
     :border=>0, :alt => "Encuestas resueltas", :title=>"Encuestas resueltas"), administrador_survey_resolved_surveys_url(item))-%>
+    <%= link_to(image_tag("pie_chart.png",
+        :border=>0, :alt => "Estadísticas", :title=>"Estadísticas"), charts_administrador_survey_resolved_surveys_url(item))-%>
 	</td>
 	<td><%= item.id %></td>
 	<td><%= item.nombre_encuesta-%></td>
