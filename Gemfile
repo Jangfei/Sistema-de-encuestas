@@ -38,7 +38,7 @@ end
 
 group :development do
   gem 'ruby-debug-ide19'
-  gem "thin"
+  #gem "thin"
 end
 
 
