@@ -96,6 +96,7 @@ def add_default_resource_methods( )
       wants.html {
         render :action => params[:action], :layout => !request.xhr?
       }
+
     end
 
     edit.response do |wants|

@@ -4,6 +4,10 @@
       <%= link_to(image_tag("answer.jpg",
          :border=>0, :alt => "Contestar", :title=>"Contestar"), new_usuario_survey_resolved_survey_url(item), :rel=> :lightbox)-%> 
     </td>
+    <td>
+      <%= link_to(image_tag("answer.jpg",
+         :border=>0, :alt => "Contestar", :title=>"Contestar"), usuario_surveys_url(:format => :json)) -%> 
+    </td>
     <td><%= item.id %></td>
     <td><%= item.nombre_encuesta-%></td>
     <td><%=item.fecha_creacion %></td>
