@@ -22,6 +22,14 @@ class Usuario::ResolvedSurveysController < ApplicationController
     wants.html {
        redirect_to usuario_surveys_url
     }
+     wants.js {
+        if !request.xhr?
+          redirect_to usuario_surveys_url
+        else
+          render "create", :format =>:js
+        end
+      }
+    
   end
   
 end
