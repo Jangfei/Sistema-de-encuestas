@@ -17,12 +17,6 @@ div.input label {
   margin-top: 5px;
 }
 
-div.input {
-  margin-bottom: 10px;
-  display: table;
-  clear: both; /* Required for Webkit, but not for Gecko */
-}
-
 div.input span {
   vertical-align: sub;
 }

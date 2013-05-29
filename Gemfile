@@ -36,6 +36,12 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 end
 
+group :development do
+  gem 'ruby-debug-ide19'
+  gem "thin"
+end
+
+
 gem 'jquery-rails', '2.1.4'
 gem 'jquery-validation-rails'
 # To use ActiveModel has_secure_password

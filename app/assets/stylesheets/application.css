@@ -19,7 +19,7 @@
  *= require jquery.ui.all
  */
 
-.simple_form div.input {
+.simple form div.input {
   margin-bottom: 10px;
   display: table;
   clear: both; /* Required for Webkit, but not for Gecko */
@@ -37,6 +37,7 @@ div.boolean label, label.collection_radio_buttons {
   float: none;
   margin: 0;
 }
+
 
 label.collection_radio_buttons {
   margin-right: 10px;

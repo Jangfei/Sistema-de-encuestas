@@ -1,5 +1,5 @@
 <%= simple_form_for(@object, :url => collection_url, :remote => is_xhr?) do |f| %>
-
+    <h3><%= parent_object.nombre_encuesta %></h3>
     <% parent_object.sections.each do |s| %>
         <fieldset>
             <legend>
